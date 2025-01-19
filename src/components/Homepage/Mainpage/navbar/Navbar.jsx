@@ -49,7 +49,7 @@ const Navbar = ({ cartCount }) => {
   return (
     <>
       <AppBar
-        position="sticky"
+        position="fixed"
         style={{
           top: 0,
           zIndex: 1100,

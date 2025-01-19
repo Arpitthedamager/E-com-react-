@@ -52,7 +52,7 @@ const ProductDetail = () => {
   if (!product) return <p>Loading...</p>;
 
   return (
-    <div className="p-6">
+    <div className="p-6 mt-14">
       {/* <button onClick={() => navigate(-1)} className="mb-4 text-blue-500">
         &larr; Back
       </button> */}
