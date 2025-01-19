@@ -13,8 +13,8 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import { useTheme } from "@mui/material/styles";
 
-const Navbar = () => {
-  const [anchorEl, setAnchorEl] = React.useState(null);
+const Navbar = ({ cartCount }) => {
+  const [anchorEl, setAnchorEl] = useState(null);
   const [isScrolled, setIsScrolled] = useState(false);
   const theme = useTheme();
   const isDesktop = useMediaQuery(theme.breakpoints.up("md"));
@@ -116,14 +116,18 @@ const Navbar = () => {
               />
             </IconButton>
           </a>
-          <a href="/#cart">
             <IconButton>
               <ShoppingCartIcon
-                href="/#search"
                 className={isScrolled ? "text-white" : "text-gray-800"}
               />
+              <span
+                className={`ml-2 text-sm ${
+                  isScrolled ? "text-white" : "text-gray-800"
+                }`}
+              >
+                ({cartCount})
+              </span>
             </IconButton>
-          </a>
         </div>
       </Toolbar>
 
