@@ -58,17 +58,19 @@ const Navbar = ({ cartCount }) => {
         }}
       >
         <Toolbar className="flex justify-between items-center px-4">
+          <a href="/">
           <Typography
             variant="h6"
             className={isScrolled ? "text-white" : "text-gray-800"}
-          >
+            >
             EtawahCommerce
           </Typography>
+            </a>
 
           {isDesktop ? (
             <div className="flex gap-6">
               <a
-                href="#home"
+                href="/"
                 className={
                   isScrolled
                     ? "text-white hover:no-underline"
@@ -78,7 +80,7 @@ const Navbar = ({ cartCount }) => {
                 Home
               </a>
               <a
-                href="#about"
+                href="/about"
                 className={
                   isScrolled
                     ? "text-white hover:no-underline"
@@ -88,7 +90,7 @@ const Navbar = ({ cartCount }) => {
                 About
               </a>
               <a
-                href="#product"
+                href="/product"
                 className={
                   isScrolled
                     ? "text-white hover:no-underline"
@@ -98,7 +100,7 @@ const Navbar = ({ cartCount }) => {
                 Products
               </a>
               <a
-                href="#contact"
+                href="/contact"
                 className={
                   isScrolled
                     ? "text-white hover:no-underline"
@@ -150,22 +152,22 @@ const Navbar = ({ cartCount }) => {
           onClose={handleMenuClose}
         >
           <MenuItem onClick={handleMenuClose}>
-            <a href="#home" className="text-gray-800">
+            <a href="/" className="text-gray-800">
               Home
             </a>
           </MenuItem>
           <MenuItem onClick={handleMenuClose}>
-            <a href="#about" className="text-gray-800">
+            <a href="/about" className="text-gray-800">
               About
             </a>
           </MenuItem>
           <MenuItem onClick={handleMenuClose}>
-            <a href="#products" className="text-gray-800">
+            <a href="/products" className="text-gray-800">
               Products
             </a>
           </MenuItem>
           <MenuItem onClick={handleMenuClose}>
-            <a href="#contact" className="text-gray-800">
+            <a href="/contact" className="text-gray-800">
               Contact
             </a>
           </MenuItem>
