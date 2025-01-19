@@ -8,29 +8,36 @@ import Footer from './components/Homepage/Mainpage/footer/Footer';
 
 const App = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
+  const [searchQuery, setSearchQuery] = useState('');
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
   };
 
+  const handleSearch = (query) => {
+    setSearchQuery(query);
+  };
+
   const categories = ['All', ...new Set(productsData.map((p) => p.category))];
 
-  const filteredProducts =
-    selectedCategory === 'All'
-      ? productsData
-      : productsData.filter((product) => product.category === selectedCategory);
+  const filteredProducts = productsData.filter((product) => {
+    const matchesCategory = selectedCategory === 'All' || product.category === selectedCategory;
+    const matchesSearch = product.name.toLowerCase().includes(searchQuery.toLowerCase());
+    return matchesCategory && matchesSearch;
+  });
 
   return (
     <div>
       <Navbar />
       <Hero />
-      <div className='py-8'>
+      <div className="py-8">
         <Filter
           categories={categories}
           selectedCategory={selectedCategory}
           onCategoryChange={handleCategoryChange}
+          onSearch={handleSearch}
         />
-        <ProductGrid products={filteredProducts} />
+        <ProductGrid  products={filteredProducts} />
       </div>
       <Footer />
     </div>
