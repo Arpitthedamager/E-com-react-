@@ -122,7 +122,7 @@ const Navbar = ({ cartCount }) => {
               />
               <span
                 className={`ml-2 text-sm ${
-                  isScrolled ? "text-white" : "text-gray-800"
+                  isScrolled ? "text-red-400" : "text-red-900"
                 }`}
               >
                 ({cartCount})
