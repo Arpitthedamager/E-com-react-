@@ -22,6 +22,7 @@ function ProductCard({ product }) {
     <div
       className={`max-w-sm mx-auto border border-gray-300 rounded-lg shadow-lg overflow-hidden relative 
                   ${isHovered ? 'transform -translate-y-2 scale-105' : ''} transition duration-300`}
+                  
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >

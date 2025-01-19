@@ -1,36 +1,38 @@
-import React, { useState } from "react";
-import Filter from "./FilterPanel";
-import ProductGrid from "./ProductGrid";
-import Footer from "./Mainpage/footer/Footer";
-import Hero from "./Mainpage/Hero/hero";
-import Navbar from "./Mainpage/navbar/Navbar";
-import productsData from "../../assets/product.json"; // Directly import productsData
+import React, { useState, useEffect } from 'react';
+import Navbar from './Mainpage/navbar/Navbar';
+import Hero from './Mainpage/Hero/hero';
+import ProductGrid from './ProductGrid'; // Import ProductGrid without Filter
+import ProductDetail from '../ProductDetails/ProductDetails'; // Import ProductDetail
+import productsData from '../../assets/product.json';
+import Footer from './Mainpage/footer/Footer';
 
 const Homepage = () => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [cart, setCart] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState(null); // State to track selected product
 
-  const handleCategoryChange = (category) => {
-    setSelectedCategory(category);
+  useEffect(() => {
+    const savedCart = JSON.parse(localStorage.getItem('cart')) || [];
+    setCart(savedCart);
+  }, []);
+
+  const handleProductClick = (product) => {
+    setSelectedProduct(product); // Set the selected product
   };
 
-  const categories = ["All", ...new Set(productsData.map((p) => p.category))];
-
-  const filteredProducts =
-    selectedCategory === "All"
-      ? productsData
-      : productsData.filter((product) => product.category === selectedCategory);
+  const handleBackToGrid = () => {
+    setSelectedProduct(null); // Reset to show product grid
+  };
 
   return (
-    <div>
-      <Navbar />
+    <div className="overflow-x-auto">
+      <Navbar cartCount={cart.length} />
       <Hero />
       <div className="py-8">
-        <Filter
-          categories={categories}
-          selectedCategory={selectedCategory}
-          onCategoryChange={handleCategoryChange}
-        />
-        <ProductGrid products={filteredProducts} />
+        {selectedProduct ? (
+          <ProductDetail product={selectedProduct} onBack={handleBackToGrid} />
+        ) : (
+          <ProductGrid products={productsData} onProductClick={handleProductClick} />
+        )}
       </div>
       <Footer />
     </div>
