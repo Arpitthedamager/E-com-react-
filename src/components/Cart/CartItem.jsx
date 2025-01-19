@@ -1,49 +1,65 @@
 import React from "react";
+import { IconButton, Button, Typography } from "@mui/material";
+import { Delete as DeleteIcon } from "@mui/icons-material";
 
 const CartCard = ({ item, onUpdateQuantity, onRemove }) => {
   return (
-    <div className="flex items-center gap-4 p-4 border-b border-gray-300">
+    <div className="flex items-center justify-between p-4 border-b border-gray-300 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300">
       {/* Product Image */}
       <img
         src={item.image}
         alt={item.name}
-        className="w-20 h-20 object-cover rounded"
+        className="w-20 h-20 object-cover rounded-md shadow-md"
       />
 
       {/* Product Details */}
-      <div className="flex-1">
-        <h3 className="text-lg font-semibold">{item.name}</h3>
-        <p className="text-sm text-gray-600">Price: ${item.price.toFixed(2)}</p>
-        <p className="text-sm text-gray-600">
+      <div className="flex-1 ml-4">
+        <Typography variant="h6" className="font-semibold text-gray-800">
+          {item.name}
+        </Typography>
+        <Typography variant="body2" className="text-gray-600">
+          Price: ${item.price.toFixed(2)}
+        </Typography>
+        <Typography variant="body2" className="text-gray-600">
           Total: ${(item.price * item.quantity).toFixed(2)}
-        </p>
+        </Typography>
       </div>
 
       {/* Quantity Controls */}
-      <div className="flex items-center gap-2">
-        <button
+      <div className="flex items-center gap-3">
+        <Button
           onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
-          className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
+          variant="outlined"
+          color="primary"
           disabled={item.quantity <= 1}
+          size="small"
+          className="w-8 h-8 rounded-full hover:bg-gray-100"
         >
           -
-        </button>
-        <span className="text-lg">{item.quantity}</span>
-        <button
+        </Button>
+        <Typography variant="body1" className="text-lg font-semibold">
+          {item.quantity}
+        </Typography>
+        <Button
           onClick={() => onUpdateQuantity(item.id, item.quantity + 1)}
-          className="px-2 py-1 bg-gray-200 rounded hover:bg-gray-300"
+          variant="outlined"
+          color="primary"
+          size="small"
+          className="w-8 h-8 rounded-full hover:bg-gray-100"
         >
           +
-        </button>
+        </Button>
       </div>
 
       {/* Remove Button */}
-      <button
+      <IconButton
         onClick={() => onRemove(item.id)}
-        className="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-600"
+        color="error"
+        size="large"
+        className="ml-4 hover:text-red-700 transition-colors"
       >
-        Remove
-      </button>
+        <DeleteIcon />
+      </IconButton>
     </div>
   );
 };

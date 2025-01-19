@@ -39,7 +39,7 @@ function Footer() {
             <div className="newsletter-form w-full md:w-1/2">
               <form id="wf-form-newsletter" name="wf-form-newsletter" onSubmit={handleSubmit} className="flex flex-col md:flex-row">
                 <input
-                  className="newsletter-input w-full md:w-3/4 p-3 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
+                  className="newsletter-input w-full md:w-3/4 p-3 mr-2 rounded-lg bg-gray-700 text-white focus:outline-none focus:ring-2 focus:ring-indigo-500"
                   type="email"
                   name="newsletter-2"
                   placeholder="Enter your email"

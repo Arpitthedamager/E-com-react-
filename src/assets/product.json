@@ -4,7 +4,7 @@
       "category": "Headphone",
       "name": "White Headphone",
       "price": 150,
-      "image": "https://via.placeholder.com/150?text=White+Headphone",
+      "image": "/Headphone/1.jpg",
       "rating": 5
     },
     {
@@ -12,7 +12,7 @@
       "category": "Headphone",
       "name": "RGB Headphone",
       "price": 100,
-      "image": "https://via.placeholder.com/150?text=RGB+Headphone",
+      "image": "/Headphone/2.jpg",
       "rating": 5
     },
     {
@@ -20,7 +20,7 @@
       "category": "Headphone",
       "name": "NX Headphone",
       "price": 100,
-      "image": "https://via.placeholder.com/150?text=NX+Headphone",
+      "image": "/Headphone/3.jpg",
       "rating": 5,
       "onSale": true,
       "originalPrice": 120
@@ -30,7 +30,7 @@
       "category": "Headphone",
       "name": "Wireless Earbuds",
       "price": 75,
-      "image": "https://via.placeholder.com/150?text=Wireless+Earbuds",
+      "image": "/Headphone/4.jpg",
       "rating": 4
     },
     {
@@ -166,7 +166,7 @@
       "category": "Phone",
       "name": "Smartphone A",
       "price": 700,
-      "image": "https://via.placeholder.com/150?text=Smartphone+A",
+      "image": "/Phone/1.jpg",
       "rating": 5
     },
     {
@@ -174,7 +174,7 @@
       "category": "Phone",
       "name": "Smartphone B",
       "price": 800,
-      "image": "https://via.placeholder.com/150?text=Smartphone+B",
+      "image": "/Phone/2.jpg",
       "rating": 5
     },
     {
@@ -190,7 +190,7 @@
       "category": "Phone",
       "name": "Smartphone D",
       "price": 900,
-      "image": "/Phone/3.jpg",
+      "image": "/Phone/4.jpg",
       "rating": 5
     },
     {

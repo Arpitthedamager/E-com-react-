@@ -33,7 +33,7 @@ const App = () => {
   });
 
   return (
-    <div>
+    <div className='overflow-x-auto'>
       <Navbar cartCount={cart.length} />
       <Hero />
       <div className="py-8">

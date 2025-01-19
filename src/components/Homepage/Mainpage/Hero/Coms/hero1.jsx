@@ -13,7 +13,7 @@ const Hero1 = () => {
           href="/product/classic-watch"
           variant="contained"
           color="primary"
-          className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-full transform transition duration-500 hover:scale-110"
+          className="mt-4 px-4 py-2 bg-transparent border text-gray-600 bg-gradient-to-br from-orange-400 to-transparent mix-blend-overlay hover:text-white rounded-3xl shadow-md hover:bg-orange-400 transition"
         >
           Buy Now
         </Button>

@@ -14,7 +14,8 @@ function ProductCard({ product }) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${product.name} added to cart!`);
+    // window.location.reload(); 
+    // alert(`${product.name} added to cart!`);
   };
 
   return (
@@ -34,7 +35,7 @@ function ProductCard({ product }) {
       )}
       <a href={`/product/${product.id}`}>
         <img
-          className="w-full h-40 object-cover"
+          className="w-full h-40 object-none"
           src={product.image}
           alt={product.name}
         />
@@ -46,7 +47,7 @@ function ProductCard({ product }) {
           Rating: {'⭐'.repeat(product.rating)}
         </p>
         <button
-          className="mt-4 px-4 py-2 bg-transparent border text-gray-600 hover:text-white rounded-3xl shadow-md hover:bg-blue-600 transition"
+          className="mt-4 px-4 py-2 bg-transparent border text-gray-600 bg-gradient-to-br from-orange-400 to-transparent mix-blend-overlay hover:text-white rounded-3xl shadow-md hover:bg-orange-400 transition"
           onClick={handleAddToCart}
         >
           Add to Cart
