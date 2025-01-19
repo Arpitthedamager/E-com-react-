@@ -26,7 +26,7 @@ const CartCard = ({ item, onUpdateQuantity, onRemove }) => {
       </div>
 
       {/* Quantity Controls */}
-      <div className="flex items-center gap-3">
+      <div className="flex   items-center gap-3">
         <Button
           onClick={() => onUpdateQuantity(item.id, item.quantity - 1)}
           variant="outlined"
@@ -52,14 +52,16 @@ const CartCard = ({ item, onUpdateQuantity, onRemove }) => {
       </div>
 
       {/* Remove Button */}
-      <IconButton
-        onClick={() => onRemove(item.id)}
-        color="error"
-        size="large"
-        className="ml-4 hover:text-red-700 transition-colors"
-      >
-        <DeleteIcon />
-      </IconButton>
+      <div className="ml-4 ">
+        <IconButton
+          onClick={() => onRemove(item.id)}
+          color="error"
+          size="large"
+          className="hover:text-red-700 transition-colors block sm:inline-block"
+        >
+          <DeleteIcon />
+        </IconButton>
+      </div>
     </div>
   );
 };

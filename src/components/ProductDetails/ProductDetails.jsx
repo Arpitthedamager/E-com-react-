@@ -1,35 +1,52 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import productsData from '../../assets/Dproduct.json'; // Import JSON data
+import React, { useEffect, useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import productsData from "../../assets/Dproduct.json"; // Import JSON data
 
 const ProductDetail = () => {
   const handleAddToCart = () => {
-    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
     const existingProduct = cart.find((item) => item.id === product.id);
+
+    // Determine the correct price
+    const productPrice =
+      typeof product.price === "object"
+        ? product.price.discounted
+        : product.price;
 
     if (existingProduct) {
       if (existingProduct.quantity < 10) {
         existingProduct.quantity += 1;
       } else {
-        alert('Maximum quantity reached');
+        alert("Maximum quantity reached");
       }
     } else {
-      cart.push({ ...product, quantity: 1 });
+      // Create a copy of the product with the correct price format
+      const productToAdd = {
+        ...product,
+        price: productPrice, // Use the resolved price
+        quantity: 1,
+      };
+      cart.push(productToAdd);
     }
 
-    localStorage.setItem('cart', JSON.stringify(cart));
+    localStorage.setItem("cart", JSON.stringify(cart));
+    window.location.reload();
+
+    alert(`${product.name} added to cart!`);
   };
 
   const { id } = useParams(); // Use react-router-dom for route parameters
   const navigate = useNavigate();
   const [product, setProduct] = useState(null);
-  const [selectedImage, setSelectedImage] = useState('');
+  const [selectedImage, setSelectedImage] = useState("");
 
   useEffect(() => {
     // Find the selected product based on the id from URL parameters
-    const selectedProduct = productsData.find((item) => item.id === parseInt(id));
+    const selectedProduct = productsData.find(
+      (item) => item.id === parseInt(id)
+    );
     setProduct(selectedProduct);
-    setSelectedImage(selectedProduct?.image || '');
+    setSelectedImage(selectedProduct?.image || "");
   }, [id]);
 
   if (!product) return <p>Loading...</p>;
@@ -43,7 +60,9 @@ const ProductDetail = () => {
         {/* Product Image and Thumbnails */}
         <div className="relative">
           {product.price.original !== product.price.discounted && (
-            <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">On Sale</span>
+            <span className="absolute top-2 left-2 bg-red-500 text-white text-xs px-2 py-1 rounded">
+              On Sale
+            </span>
           )}
           <div className="overflow-hidden rounded-lg shadow-md">
             <img
@@ -53,14 +72,22 @@ const ProductDetail = () => {
             />
           </div>
           <div className="flex gap-4 mt-4">
-            <img src={product.image} alt="Main" className="w-16 h-16 object-cover rounded-md cursor-pointer border" />
-            
+            <img
+              src={product.image}
+              alt="Main"
+              className="w-16 h-16 object-cover rounded-md cursor-pointer border"
+            />
+
             {product.thumbnails.map((thumb, index) => (
               <img
                 key={index}
                 src={thumb}
                 alt={`Thumbnail ${index + 1}`}
-                className={`w-16 h-16 object-none rounded-md cursor-pointer border ${selectedImage === thumb ? 'border-blue-500' : 'hover:border-blue-500'}`}
+                className={`w-16 h-16 object-none rounded-md cursor-pointer border ${
+                  selectedImage === thumb
+                    ? "border-blue-500"
+                    : "hover:border-blue-500"
+                }`}
                 onClick={() => setSelectedImage(thumb)}
               />
             ))}
@@ -73,7 +100,9 @@ const ProductDetail = () => {
           <p className="text-lg text-gray-600 mb-4">{product.category}</p>
 
           <div className="flex items-center mb-4">
-            <span className="text-2xl font-semibold text-red-500">${product.price.discounted}</span>
+            <span className="text-2xl font-semibold text-red-500">
+              ${product.price.discounted}
+            </span>
             {product.price.original !== product.price.discounted && (
               <span className="text-sm text-gray-500 line-through ml-4">
                 ${product.price.original}
@@ -83,8 +112,12 @@ const ProductDetail = () => {
 
           <div className="flex items-center mb-4">
             <span className="text-sm text-gray-500 mr-2">Rating:</span>
-            <span className="text-yellow-500">{'★'.repeat(product.rating)}</span>
-            <span className="text-gray-300">{'★'.repeat(5 - product.rating)}</span>
+            <span className="text-yellow-500">
+              {"★".repeat(product.rating)}
+            </span>
+            <span className="text-gray-300">
+              {"★".repeat(5 - product.rating)}
+            </span>
           </div>
 
           <div className="flex items-center gap-4 mb-4">
@@ -98,23 +131,25 @@ const ProductDetail = () => {
               onChange={(e) => {
                 const value = parseInt(e.target.value, 10);
                 if (value < 1 || value > 10) {
-                  alert('Quantity must be between 1 and 10');
+                  alert("Quantity must be between 1 and 10");
                   e.target.value = 1;
                 }
               }}
             />
-          {/* Add to Cart Button */}
-          <button
-            className="px-6 py-2 bg-gradient-to-r  from-orange-500 to-red-500 text-white rounded-full shadow-md hover:shadow-lg hover:from-orange-600 hover:to-red-600 transition"
-            onClick={handleAddToCart}
-          >
-            Add to Cart
-          </button>
+            {/* Add to Cart Button */}
+            <button
+              className="px-6 py-2 bg-gradient-to-r from-orange-500 to-red-500 text-white rounded-full shadow-md hover:shadow-lg hover:from-orange-600 hover:to-red-600 transition"
+              onClick={handleAddToCart}
+            >
+              Add to Cart
+            </button>
           </div>
 
           <div className="mb-4">
             <p className="font-semibold">Stock:</p>
-            <p>{product.stock.status} (SKU: {product.stock.sku})</p>
+            <p>
+              {product.stock.status} (SKU: {product.stock.sku})
+            </p>
           </div>
 
           <div className="mb-4">
@@ -177,7 +212,6 @@ const ProductDetail = () => {
               Share this product
             </a>
           </div>
-
         </div>
       </div>
     </div>
