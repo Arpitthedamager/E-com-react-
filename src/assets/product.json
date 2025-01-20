@@ -38,7 +38,7 @@
       "category": "Headphone",
       "name": "Over-Ear Studio Headphones",
       "price": 200,
-      "image": "https://via.placeholder.com/150?text=Studio+Headphones",
+      "image": "/Headphone/5.jpeg",
       "rating": 5
     },
     {
@@ -46,7 +46,7 @@
       "category": "Monitor",
       "name": "Gaming Monitor",
       "price": 300,
-      "image": "https://via.placeholder.com/150?text=Gaming+Monitor",
+      "image": "/Monitor/1.jpg",
       "rating": 4
     },
     {
@@ -54,7 +54,7 @@
       "category": "Monitor",
       "name": "4K UHD Monitor",
       "price": 400,
-      "image": "https://via.placeholder.com/150?text=4K+Monitor",
+      "image": "/Monitor/2.jpg",
       "rating": 5
     },
     {
@@ -62,7 +62,7 @@
       "category": "Monitor",
       "name": "Curved Monitor",
       "price": 350,
-      "image": "https://via.placeholder.com/150?text=Curved+Monitor",
+      "image": "/Monitor/3.jpeg",
       "rating": 4
     },
     {
@@ -70,7 +70,7 @@
       "category": "Monitor",
       "name": "Portable Monitor",
       "price": 200,
-      "image": "https://via.placeholder.com/150?text=Portable+Monitor",
+      "image": "/Monitor/4.jpeg",
       "rating": 4
     },
     {
@@ -78,7 +78,7 @@
       "category": "Monitor",
       "name": "Ultrawide Monitor",
       "price": 500,
-      "image": "https://via.placeholder.com/150?text=Ultrawide+Monitor",
+      "image": "/Monitor/5.jpg",
       "rating": 5
     },
     {
@@ -86,7 +86,7 @@
       "category": "Speaker",
       "name": "Bluetooth Speaker",
       "price": 100,
-      "image": "https://via.placeholder.com/150?text=Bluetooth+Speaker",
+      "image": "/Speaker/1.jpeg",
       "rating": 4
     },
     {
@@ -94,7 +94,7 @@
       "category": "Speaker",
       "name": "Smart Speaker",
       "price": 150,
-      "image": "https://via.placeholder.com/150?text=Smart+Speaker",
+      "image": "/Speaker/2.jpeg",
       "rating": 5
     },
     {
@@ -102,7 +102,7 @@
       "category": "Speaker",
       "name": "Soundbar",
       "price": 200,
-      "image": "https://via.placeholder.com/150?text=Soundbar",
+      "image": "/Speaker/3.jpeg",
       "rating": 5
     },
     {
@@ -110,7 +110,7 @@
       "category": "Speaker",
       "name": "Portable PA System",
       "price": 300,
-      "image": "https://via.placeholder.com/150?text=PA+System",
+      "image": "/Speaker/4.jpeg",
       "rating": 4
     },
     {
@@ -118,7 +118,7 @@
       "category": "Speaker",
       "name": "Bookshelf Speaker",
       "price": 250,
-      "image": "https://via.placeholder.com/150?text=Bookshelf+Speaker",
+      "image": "/Speaker/5.jpeg",
       "rating": 5
     },
     {
@@ -126,7 +126,7 @@
       "category": "Keyboard",
       "name": "Mechanical Keyboard",
       "price": 120,
-      "image": "https://via.placeholder.com/150?text=Mechanical+Keyboard",
+      "image": "/Keyboard/1.jpeg",
       "rating": 5
     },
     {
@@ -134,7 +134,7 @@
       "category": "Keyboard",
       "name": "Wireless Keyboard",
       "price": 60,
-      "image": "https://via.placeholder.com/150?text=Wireless+Keyboard",
+      "image": "/Keyboard/2.jpeg",
       "rating": 4
     },
     {
@@ -142,7 +142,7 @@
       "category": "Keyboard",
       "name": "Ergonomic Keyboard",
       "price": 100,
-      "image": "https://via.placeholder.com/150?text=Ergonomic+Keyboard",
+      "image": "/Keyboard/3.jpeg",
       "rating": 5
     },
     {
@@ -150,7 +150,7 @@
       "category": "Keyboard",
       "name": "Gaming Keyboard",
       "price": 150,
-      "image": "https://via.placeholder.com/150?text=Gaming+Keyboard",
+      "image": "/Keyboard/4.jpeg",
       "rating": 5
     },
     {
@@ -158,7 +158,7 @@
       "category": "Keyboard",
       "name": "Compact Keyboard",
       "price": 80,
-      "image": "https://via.placeholder.com/150?text=Compact+Keyboard",
+      "image": "/Keyboard/5.jpeg",
       "rating": 4
     },
     {

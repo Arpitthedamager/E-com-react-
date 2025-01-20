@@ -152,7 +152,7 @@
             "original": 220,
             "discounted": 200
         },
-        "image": "https://via.placeholder.com/150?text=Studio+Headphones",
+        "image": "/Headphone/5.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Studio+Headphones+thumb1",
             "https://via.placeholder.com/150?text=Studio+Headphones+thumb2"
@@ -187,7 +187,7 @@
             "original": 350,
             "discounted": 300
         },
-        "image": "https://via.placeholder.com/150?text=Gaming+Monitor",
+        "image": "/Monitor/1.jpg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Gaming+Monitor+thumb1",
             "https://via.placeholder.com/150?text=Gaming+Monitor+thumb2"
@@ -217,12 +217,12 @@
     {
         "id": 7,
         "category": "Monitor",
-        "name": "4K UHD Monitor",
+        "name": "4K UHD Montoir",
         "price": {
             "original": 450,
             "discounted": 400
         },
-        "image": "https://via.placeholder.com/150?text=4K+Monitor",
+        "image": "/Monitor/2.jpg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=4K+Monitor+thumb1",
             "https://via.placeholder.com/150?text=4K+Monitor+thumb2"
@@ -256,7 +256,7 @@
             "original": 400,
             "discounted": 350
         },
-        "image": "https://via.placeholder.com/150?text=Curved+Monitor",
+        "image": "/Monitor/3.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Curved+Monitor+thumb1",
             "https://via.placeholder.com/150?text=Curved+Monitor+thumb2"
@@ -290,7 +290,7 @@
             "original": 250,
             "discounted": 200
         },
-        "image": "https://via.placeholder.com/150?text=Portable+Monitor",
+        "image": "/Monitor/4.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Portable+Monitor+thumb1",
             "https://via.placeholder.com/150?text=Portable+Monitor+thumb2"
@@ -324,7 +324,7 @@
             "original": 600,
             "discounted": 500
         },
-        "image": "https://via.placeholder.com/150?text=Ultrawide+Monitor",
+        "image": "/Monitor/5.jpg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Ultrawide+Monitor+thumb1",
             "https://via.placeholder.com/150?text=Ultrawide+Monitor+thumb2"
@@ -359,7 +359,7 @@
             "original": 120,
             "discounted": 100
         },
-        "image": "https://via.placeholder.com/150?text=Bluetooth+Speaker",
+        "image": "/Speaker/1.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Bluetooth+Speaker+thumb1",
             "https://via.placeholder.com/150?text=Bluetooth+Speaker+thumb2"
@@ -393,7 +393,7 @@
             "original": 180,
             "discounted": 150
         },
-        "image": "https://via.placeholder.com/150?text=Smart+Speaker",
+        "image": "/Speaker/2.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Smart+Speaker+thumb1",
             "https://via.placeholder.com/150?text=Smart+Speaker+thumb2"
@@ -428,7 +428,7 @@
             "original": 250,
             "discounted": 200
         },
-        "image": "https://via.placeholder.com/150?text=Soundbar",
+        "image": "/Speaker/3.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Soundbar+thumb1",
             "https://via.placeholder.com/150?text=Soundbar+thumb2"
@@ -462,7 +462,7 @@
             "original": 350,
             "discounted": 300
         },
-        "image": "https://via.placeholder.com/150?text=PA+System",
+        "image": "/Speaker/4.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=PA+System+thumb1",
             "https://via.placeholder.com/150?text=PA+System+thumb2"
@@ -497,7 +497,7 @@
             "original": 300,
             "discounted": 250
         },
-        "image": "https://via.placeholder.com/150?text=Bookshelf+Speaker",
+        "image": "/Speaker/5.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Bookshelf+Speaker+thumb1",
             "https://via.placeholder.com/150?text=Bookshelf+Speaker+thumb2"
@@ -531,7 +531,7 @@
             "original": 140,
             "discounted": 120
         },
-        "image": "https://via.placeholder.com/150?text=Mechanical+Keyboard",
+        "image": "/Keyboard/1.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Mechanical+Keyboard+thumb1",
             "https://via.placeholder.com/150?text=Mechanical+Keyboard+thumb2"
@@ -566,7 +566,7 @@
             "original": 80,
             "discounted": 60
         },
-        "image": "https://via.placeholder.com/150?text=Wireless+Keyboard",
+        "image": "/Keyboard/2.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Wireless+Keyboard+thumb1",
             "https://via.placeholder.com/150?text=Wireless+Keyboard+thumb2"
@@ -600,7 +600,7 @@
             "original": 120,
             "discounted": 100
         },
-        "image": "https://via.placeholder.com/150?text=Ergonomic+Keyboard",
+        "image": "/Keyboard/3.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Ergonomic+Keyboard+thumb1",
             "https://via.placeholder.com/150?text=Ergonomic+Keyboard+thumb2"
@@ -634,7 +634,7 @@
             "original": 180,
             "discounted": 150
         },
-        "image": "https://via.placeholder.com/150?text=Gaming+Keyboard",
+        "image": "/Keyboard/4.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Gaming+Keyboard+thumb1",
             "https://via.placeholder.com/150?text=Gaming+Keyboard+thumb2"
@@ -669,7 +669,7 @@
             "original": 90,
             "discounted": 80
         },
-        "image": "https://via.placeholder.com/150?text=Compact+Keyboard",
+        "image": "/Keyboard/5.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Compact+Keyboard+thumb1",
             "https://via.placeholder.com/150?text=Compact+Keyboard+thumb2"
