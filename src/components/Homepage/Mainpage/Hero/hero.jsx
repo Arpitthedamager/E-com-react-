@@ -1,6 +1,6 @@
 import React from 'react';
 import Hero1 from './Coms/hero1';
-import Category from '../category/Category';
+import CategoryGrid from '../category/Category';
 
 const Hero = () => {
   return (
@@ -9,8 +9,6 @@ const Hero = () => {
       {/* Main Hero Section */}
       <Hero1 />
       <CategoryGrid
-        categories={categories}
-        onCategorySelect={handleCategoryChange}
       />
       {/* Diagonal Overlay 1: Top-left to Bottom-right */}
       <div className="absolute inset-0 z-10 bg-gradient-to-br from-orange-400 to-transparent mix-blend-overlay"></div>

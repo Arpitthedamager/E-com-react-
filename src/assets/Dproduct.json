@@ -531,7 +531,7 @@
             "original": 140,
             "discounted": 120
         },
-        "image": "/Keyboard/1.jpeg",
+        "image": "/keyboard/1.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Mechanical+Keyboard+thumb1",
             "https://via.placeholder.com/150?text=Mechanical+Keyboard+thumb2"
@@ -566,7 +566,7 @@
             "original": 80,
             "discounted": 60
         },
-        "image": "/Keyboard/2.jpeg",
+        "image": "/keyboard/2.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Wireless+Keyboard+thumb1",
             "https://via.placeholder.com/150?text=Wireless+Keyboard+thumb2"
@@ -600,7 +600,7 @@
             "original": 120,
             "discounted": 100
         },
-        "image": "/Keyboard/3.jpeg",
+        "image": "/keyboard/3.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Ergonomic+Keyboard+thumb1",
             "https://via.placeholder.com/150?text=Ergonomic+Keyboard+thumb2"
@@ -634,7 +634,7 @@
             "original": 180,
             "discounted": 150
         },
-        "image": "/Keyboard/4.jpeg",
+        "image": "/keyboard/4.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Gaming+Keyboard+thumb1",
             "https://via.placeholder.com/150?text=Gaming+Keyboard+thumb2"
@@ -669,7 +669,7 @@
             "original": 90,
             "discounted": 80
         },
-        "image": "/Keyboard/5.jpeg",
+        "image": "/keyboard/5.jpeg",
         "thumbnails": [
             "https://via.placeholder.com/150?text=Compact+Keyboard+thumb1",
             "https://via.placeholder.com/150?text=Compact+Keyboard+thumb2"

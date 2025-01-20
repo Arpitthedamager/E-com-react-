@@ -3,7 +3,6 @@ import {
   AppBar,
   Toolbar,
   IconButton,
-  Typography,
   Menu,
   MenuItem,
   useMediaQuery,
@@ -59,13 +58,12 @@ const Navbar = ({ cartCount }) => {
       >
         <Toolbar className="flex justify-between items-center px-4">
           <a href="/">
-          <Typography
-            variant="h6"
-            className={isScrolled ? "text-white" : "text-gray-800"}
-            >
-            EtawahCommerce
-          </Typography>
-            </a>
+            <img
+              src={isScrolled ? "/logo1.png" : "/logo.png"} // Change logo based on scroll
+              alt="EtawahEcommerce"
+              className={`h-16 ${isScrolled ? "text-white" : "text-gray-800"}`}
+            />
+          </a>
 
           {isDesktop ? (
             <div className="flex gap-6">

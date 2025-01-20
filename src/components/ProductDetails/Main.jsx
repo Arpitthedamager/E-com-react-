@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
 import ProductDetail from './ProductDetails';
-import Hero from '../Homepage/Mainpage/Hero/hero';
+// import Hero from '../Homepage/Mainpage/Hero/hero';
 import Navbar from '../Homepage/Mainpage/navbar/Navbar';
 import Footer from '../Homepage/Mainpage/footer/Footer';
 

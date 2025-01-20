@@ -126,7 +126,7 @@
       "category": "Keyboard",
       "name": "Mechanical Keyboard",
       "price": 120,
-      "image": "/Keyboard/1.jpeg",
+      "image": "/keyboard/1.jpeg",
       "rating": 5
     },
     {
@@ -134,7 +134,7 @@
       "category": "Keyboard",
       "name": "Wireless Keyboard",
       "price": 60,
-      "image": "/Keyboard/2.jpeg",
+      "image": "/keyboard/2.jpeg",
       "rating": 4
     },
     {
@@ -142,7 +142,7 @@
       "category": "Keyboard",
       "name": "Ergonomic Keyboard",
       "price": 100,
-      "image": "/Keyboard/3.jpeg",
+      "image": "/keyboard/3.jpeg",
       "rating": 5
     },
     {
@@ -150,7 +150,7 @@
       "category": "Keyboard",
       "name": "Gaming Keyboard",
       "price": 150,
-      "image": "/Keyboard/4.jpeg",
+      "image": "/keyboard/4.jpeg",
       "rating": 5
     },
     {
@@ -158,7 +158,7 @@
       "category": "Keyboard",
       "name": "Compact Keyboard",
       "price": 80,
-      "image": "/Keyboard/5.jpeg",
+      "image": "/keyboard/5.jpeg",
       "rating": 4
     },
     {
