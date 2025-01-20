@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { IconButton, Button, Typography } from "@mui/material";
 import { Delete as DeleteIcon, Close as CloseIcon } from "@mui/icons-material";
 import CartCard from "./CartItem";
+import RazorpayButton from "../Checkout/PlaceOrderButton";
 
 const Cart = ({ isOpen, onClose }) => {
   const [cartItems, setCartItems] = useState([]);
@@ -40,7 +41,10 @@ const Cart = ({ isOpen, onClose }) => {
         </div>
 
         {/* Cart Title */}
-        <Typography variant="h4" className="text-center mb-6 text-gray-800 font-semibold">
+        <Typography
+          variant="h4"
+          className="text-center mb-6 text-gray-800 font-semibold"
+        >
           Your Cart
         </Typography>
 
@@ -72,12 +76,13 @@ const Cart = ({ isOpen, onClose }) => {
             </Typography>
 
             {/* Checkout Button */}
-            <button
-              className="px-6 py-2 bg-blue-500 text-white rounded-lg shadow-md hover:bg-blue-600 transition"
-              onClick={() => alert("Proceeding to checkout...")}
-            >
-              Checkout
-            </button> 
+
+            {/* <button
+              className="px-6 py-2 bg-blue-500 text-white rounded-lg"
+              > */}
+              <RazorpayButton/>
+            {/* </button> */}
+              
           </div>
         )}
       </div>

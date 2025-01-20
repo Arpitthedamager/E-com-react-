@@ -8,8 +8,10 @@ const Hero = () => {
 
       {/* Main Hero Section */}
       <Hero1 />
-      <Category />
-
+      <CategoryGrid
+        categories={categories}
+        onCategorySelect={handleCategoryChange}
+      />
       {/* Diagonal Overlay 1: Top-left to Bottom-right */}
       <div className="absolute inset-0 z-10 bg-gradient-to-br from-orange-400 to-transparent mix-blend-overlay"></div>
 

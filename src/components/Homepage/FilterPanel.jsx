@@ -1,11 +1,43 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 function Filter({ categories, selectedCategory, onCategoryChange, onSearch }) {
   const [searchQuery, setSearchQuery] = useState('');
 
+  // Update selected category and search query based on URL query parameters
+  useEffect(() => {
+    const urlParams = new URLSearchParams(window.location.search); // Get parameters from the URL query string
+    const categoryFromUrl = urlParams.get('category');
+    const searchQueryFromUrl = urlParams.get('search');
+
+    // Set the category from the URL if it's valid
+    if (categoryFromUrl && categories.includes(categoryFromUrl)) {
+      onCategoryChange(categoryFromUrl);
+    }
+
+    // Set the search query from the URL if it exists
+    if (searchQueryFromUrl) {
+      setSearchQuery(searchQueryFromUrl);
+      onSearch(searchQueryFromUrl); // Trigger the filtering function in the parent component
+    }
+  }, [categories, onCategoryChange, onSearch]);
+
+  // Update the URL query parameters when the category is changed
+  const handleCategoryChange = (e) => {
+    const newCategory = e.target.value;
+    onCategoryChange(newCategory);
+    const searchParams = new URLSearchParams(window.location.search);
+    searchParams.set('category', newCategory); // Update the category query parameter
+    window.history.pushState({}, '', '?' + searchParams.toString()); // Update the URL
+  };
+
+  // Update the URL query parameters when the search query changes
   const handleSearchChange = (e) => {
-    setSearchQuery(e.target.value);
-    onSearch(e.target.value); // Trigger the filtering function in the parent component
+    const query = e.target.value;
+    setSearchQuery(query);
+    onSearch(query); // Trigger the filtering function in the parent component
+    const searchParams = new URLSearchParams(window.location.search);
+    searchParams.set('search', query); // Update the search query parameter
+    window.history.pushState({}, '', '?' + searchParams.toString()); // Update the URL
   };
 
   return (
@@ -21,7 +53,7 @@ function Filter({ categories, selectedCategory, onCategoryChange, onSearch }) {
           id="category"
           className="px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm w-full sm:w-auto"
           value={selectedCategory}
-          onChange={(e) => onCategoryChange(e.target.value)}
+          onChange={handleCategoryChange} // Handle category change
         >
           <option value="All">Show All</option>
           {categories.map((category) => (
@@ -36,7 +68,7 @@ function Filter({ categories, selectedCategory, onCategoryChange, onSearch }) {
           className="px-4 py-2 border border-gray-300 rounded-full focus:outline-none focus:ring-2 focus:ring-blue-500 text-sm w-full sm:w-auto"
           placeholder="Search products"
           value={searchQuery}
-          onChange={handleSearchChange}
+          onChange={handleSearchChange} // Handle search input change
         />
       </div>
     </div>
