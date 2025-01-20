@@ -24,7 +24,9 @@ const Cart = ({ isOpen, onClose }) => {
     const updatedCart = cartItems.filter((item) => item.id !== id);
     setCartItems(updatedCart);
     localStorage.setItem("cart", JSON.stringify(updatedCart));
-    // window.location.reload();
+
+    window.location.reload();
+    alert(`${product.name} added to cart!`);
   };
 
   if (!isOpen) return null;
@@ -77,11 +79,11 @@ const Cart = ({ isOpen, onClose }) => {
 
             {/* Checkout Button */}
 
-            {/* <button
-              className="px-6 py-2 bg-blue-500 text-white rounded-lg"
-              > */}
-              {/* <RazorpayButton/> */}
-            {/* </button> */}
+            <button
+              // className="px-6 py-2 bg-blue-500 text-white rounded-lg"
+              >
+              <RazorpayButton/>
+            </button>
               
           </div>
         )}

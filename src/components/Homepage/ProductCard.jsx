@@ -14,8 +14,8 @@ function ProductCard({ product }) {
     }
 
     localStorage.setItem('cart', JSON.stringify(cart));
-    // window.location.reload(); 
-    // alert(`${product.name} added to cart!`);
+    window.location.reload(); 
+    alert(`${product.name} added to cart!`);
   };
 
   return (
