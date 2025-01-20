@@ -25,11 +25,12 @@ function Footer() {
       setFormError(true);
     }
   };
-  
+
   return (
-    <footer id="footer" className="bg-gray-800 text-white">
-      <div className="main-footer py-10">
-        <div className="container mx-auto px-6">
+    <footer id="footer" className="bg-gray-800 text-white relative">
+      <div className="main-footer py-10 bg-cover bg-center" style={{ backgroundImage: "url('https://cdn.prod.website-files.com/66c5934366ec1f0519f21b89/66c5934366ec1f0519f21d61_18683.avif')" }}>
+        <div className="absolute inset-0 bg-black opacity-90"></div> {/* Black tint overlay */}
+        <div className="container mx-auto px-6 relative z-10">
           <div className="newsletter-block flex flex-col md:flex-row justify-between items-center">
             <div className="contents-40 w-full md:w-1/2 mb-6 md:mb-0">
               <h2 className="text-2xl text-white leading-tight">
@@ -109,9 +110,11 @@ function Footer() {
         </div>
       </div>
 
-      <div className="footer-container bg-gray-900 py-4">
+      {/* Footer Section */}
+      <div className="footer-container bg-gray-900 py-4 relative z-20"> {/* Added relative z-index */}
         <div className="footer-copyright text-center text-gray-400">
-          Copyright © Gadgetz | Designed by Nexoy |
+          Copyright © Gadgetz | Designed by Nexoy | 
+          <span className="ml-2 text-gray-400">by Mr. Damager (Arpit Kumar)</span>
           <a href="https://webflow.com/" className="ml-2 text-gray-400 hover:text-white">Powered by Webflow.com</a>
         </div>
         <div className="social-share-icon-container flex justify-center mt-2">
